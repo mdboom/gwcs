@@ -1,4 +1,5 @@
-import os.path
+# Licensed under a 3-clause BSD style license - see LICENSE.rst
+from __future__ import absolute_import, division, unicode_literals, print_function
 
 from pyasdf.extension import AsdfExtension
 from pyasdf import util, resolver
@@ -12,7 +13,7 @@ class GWCSExtension(AsdfExtension):
 
     @property
     def tag_mapping(self):
-        return [('tag:stsci.edu:asdf',
+        return [('tag:stsci.edu:asdf/',
                  'http://stsci.edu/schemas/asdf{tag_suffix}')]
 
     @property
